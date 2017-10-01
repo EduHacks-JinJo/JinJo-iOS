@@ -1,0 +1,6 @@
+framework module Pods_JinJo_iOS {
+  umbrella header "Pods-JinJo-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

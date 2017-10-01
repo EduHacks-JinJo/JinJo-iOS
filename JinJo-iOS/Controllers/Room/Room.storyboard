@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Room View Controller-->
+        <scene sceneID="rwF-M1-0L2">
+            <objects>
+                <viewController storyboardIdentifier="RoomViewController" automaticallyAdjustsScrollViewInsets="NO" id="9bq-7I-I3S" customClass="RoomViewController" customModule="JinJo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MBm-OY-xu6"/>
+                        <viewControllerLayoutGuide type="bottom" id="KuO-P9-sxr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H7u-Cc-tnF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-1k-Aj2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="587"/>
+                                <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9w-wu-FJZ">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="U7D-c8-w1l"/>
+                                </constraints>
+                                <color key="tintColor" red="0.41959643359999999" green="0.73057013749999999" blue="0.71975094080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Ask Question"/>
+                                <connections>
+                                    <action selector="askQuestionAction:" destination="9bq-7I-I3S" eventType="touchUpInside" id="0hH-ab-dYT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qg2-1k-Aj2" firstAttribute="top" secondItem="MBm-OY-xu6" secondAttribute="bottom" id="TWb-3R-6Fr"/>
+                            <constraint firstItem="m9w-wu-FJZ" firstAttribute="top" secondItem="Qg2-1k-Aj2" secondAttribute="bottom" id="Ucv-FI-USY"/>
+                            <constraint firstItem="KuO-P9-sxr" firstAttribute="top" secondItem="m9w-wu-FJZ" secondAttribute="bottom" id="b31-f0-LfM"/>
+                            <constraint firstAttribute="trailing" secondItem="Qg2-1k-Aj2" secondAttribute="trailing" id="bnc-47-xkb"/>
+                            <constraint firstItem="Qg2-1k-Aj2" firstAttribute="leading" secondItem="H7u-Cc-tnF" secondAttribute="leading" id="gi2-a2-VqT"/>
+                            <constraint firstItem="m9w-wu-FJZ" firstAttribute="leading" secondItem="H7u-Cc-tnF" secondAttribute="leading" id="pq2-np-tf2"/>
+                            <constraint firstAttribute="trailing" secondItem="m9w-wu-FJZ" secondAttribute="trailing" id="qGr-TU-N88"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="questionButton" destination="m9w-wu-FJZ" id="P68-BU-7bN"/>
+                        <outlet property="questionButtonHeight" destination="U7D-c8-w1l" id="M0X-SU-b8W"/>
+                        <outlet property="tableView" destination="Qg2-1k-Aj2" id="RFb-0S-1V6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULE-TG-3bT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2720.8000000000002" y="119.1904047976012"/>
+        </scene>
+        <!--Ask A Question-->
+        <scene sceneID="yOY-Ew-O5z">
+            <objects>
+                <viewController storyboardIdentifier="AskViewController" id="lLS-Nw-wQ0" customClass="AskViewController" customModule="JinJo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jus-Mh-oxt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sou-NO-IdD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ulk-Mb-aum">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBn-1L-joT">
+                                <rect key="frame" x="16" y="36" width="343" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="G5e-vZ-tAC"/>
+                                </constraints>
+                                <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-zb-hFl">
+                                <rect key="frame" x="16" y="277" width="343" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ymq-y8-Y6x"/>
+                                </constraints>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.41959643359999999" green="0.73057013749999999" blue="0.71975094080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postAction:" destination="lLS-Nw-wQ0" eventType="touchUpInside" id="Qtj-qO-nEP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tBn-1L-joT" secondAttribute="trailing" constant="16" id="KjC-H6-3D3"/>
+                            <constraint firstItem="RvS-zb-hFl" firstAttribute="centerX" secondItem="Ulk-Mb-aum" secondAttribute="centerX" id="aeS-Gc-DGQ"/>
+                            <constraint firstItem="RvS-zb-hFl" firstAttribute="top" secondItem="tBn-1L-joT" secondAttribute="bottom" constant="16" id="efV-gb-Z54"/>
+                            <constraint firstItem="tBn-1L-joT" firstAttribute="top" secondItem="jus-Mh-oxt" secondAttribute="bottom" constant="16" id="fHJ-Mj-mdi"/>
+                            <constraint firstItem="tBn-1L-joT" firstAttribute="leading" secondItem="Ulk-Mb-aum" secondAttribute="leading" constant="16" id="mzk-hL-F9X"/>
+                            <constraint firstItem="RvS-zb-hFl" firstAttribute="leading" secondItem="Ulk-Mb-aum" secondAttribute="leading" constant="16" id="rdI-HE-Vgm"/>
+                            <constraint firstAttribute="trailing" secondItem="RvS-zb-hFl" secondAttribute="trailing" constant="16" id="wVO-Mk-os6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ask A Question" id="dYr-d1-AwS">
+                        <barButtonItem key="backBarButtonItem" title=" " id="jjm-aY-J1p"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="postButton" destination="RvS-zb-hFl" id="JYg-0V-dq7"/>
+                        <outlet property="textView" destination="tBn-1L-joT" id="R3s-da-g7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adj-5W-lF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3537" y="119"/>
+        </scene>
+    </scenes>
+</document>

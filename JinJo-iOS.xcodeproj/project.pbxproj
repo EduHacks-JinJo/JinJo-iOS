@@ -7,13 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B98AFED11F8044C100B90F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFED01F8044C100B90F41 /* AppDelegate.swift */; };
-		B98AFED31F8044C100B90F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFED21F8044C100B90F41 /* ViewController.swift */; };
-		B98AFED61F8044C100B90F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFED41F8044C100B90F41 /* Main.storyboard */; };
-		B98AFED81F8044C100B90F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98AFED71F8044C100B90F41 /* Assets.xcassets */; };
-		B98AFEDB1F8044C100B90F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFED91F8044C100B90F41 /* LaunchScreen.storyboard */; };
+		1AFA152B027C7702B199D67B /* Pods_JinJo_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CF0DF7E2EAB40923DE4A79 /* Pods_JinJo_iOSTests.framework */; };
+		2605B26F198A6B6693310EC4 /* Pods_JinJo_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5567373B5A935D1F49368783 /* Pods_JinJo_iOSUITests.framework */; };
+		9975239BDAADD1C9898212E0 /* Pods_JinJo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982666F686944AFBACD8C3AE /* Pods_JinJo_iOS.framework */; };
 		B98AFEE61F8044C100B90F41 /* JinJo_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFEE51F8044C100B90F41 /* JinJo_iOSTests.swift */; };
 		B98AFEF11F8044C100B90F41 /* JinJo_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFEF01F8044C100B90F41 /* JinJo_iOSUITests.swift */; };
+		B98AFF151F8051AF00B90F41 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF141F8051AF00B90F41 /* Splash.storyboard */; };
+		B98AFF171F80528200B90F41 /* SplashLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF161F80528200B90F41 /* SplashLogInViewController.swift */; };
+		B98AFF1C1F8052F000B90F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF181F8052F000B90F41 /* AppDelegate.swift */; };
+		B98AFF1D1F8052F000B90F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF191F8052F000B90F41 /* Assets.xcassets */; };
+		B98AFF1E1F8052F000B90F41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF1A1F8052F000B90F41 /* Info.plist */; };
+		B98AFF1F1F8052F000B90F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF1B1F8052F000B90F41 /* LaunchScreen.storyboard */; };
+		B98AFF211F805B0E00B90F41 /* SplashJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF201F805B0E00B90F41 /* SplashJoinViewController.swift */; };
+		B98AFF231F805B9600B90F41 /* SplashSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF221F805B9600B90F41 /* SplashSignUpViewController.swift */; };
+		B98AFF271F805CE200B90F41 /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF261F805CE200B90F41 /* Courses.storyboard */; };
+		B98AFF2C1F805DF600B90F41 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF2B1F805DF600B90F41 /* CoursesTableViewCell.swift */; };
+		B98AFF2E1F805E0000B90F41 /* CoursesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF2D1F805E0000B90F41 /* CoursesTableViewCell.xib */; };
+		B98AFF311F80609B00B90F41 /* String+URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF2F1F80609B00B90F41 /* String+URLEncoding.swift */; };
+		B98AFF321F80609B00B90F41 /* UIView+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF301F80609B00B90F41 /* UIView+Shape.swift */; };
+		B98AFF341F80614800B90F41 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF331F80614800B90F41 /* CoursesViewController.swift */; };
+		B98AFF361F8087CA00B90F41 /* CourseRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF351F8087CA00B90F41 /* CourseRoomsViewController.swift */; };
+		B98AFF3C1F808AA600B90F41 /* CourseRoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF3B1F808AA600B90F41 /* CourseRoomsTableViewCell.swift */; };
+		B98AFF3E1F808AB300B90F41 /* CourseRoomsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF3D1F808AB300B90F41 /* CourseRoomsTableViewCell.xib */; };
+		B98AFF401F808E8C00B90F41 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF3F1F808E8C00B90F41 /* CreateRoomViewController.swift */; };
+		B98AFF431F80922B00B90F41 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF421F80922B00B90F41 /* RoomTableViewCell.swift */; };
+		B98AFF451F80924300B90F41 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF441F80924300B90F41 /* RoomTableViewCell.xib */; };
+		B98AFF471F8094A500B90F41 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF461F8094A500B90F41 /* Room.storyboard */; };
+		B98AFF491F80950D00B90F41 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF481F80950D00B90F41 /* RoomViewController.swift */; };
+		B98AFF4B1F80B42A00B90F41 /* AskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF4A1F80B42A00B90F41 /* AskViewController.swift */; };
+		B98AFF4D1F80BA2200B90F41 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF4C1F80BA2200B90F41 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +56,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03A493679B0949EBC0A905F2 /* Pods-JinJo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSTests/Pods-JinJo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		1D24D48680B551E1086C56BE /* Pods-JinJo-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSUITests/Pods-JinJo-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A9DABD17FA0629618496B8C /* Pods-JinJo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOS/Pods-JinJo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		36CF0DF7E2EAB40923DE4A79 /* Pods_JinJo_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JinJo_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5567373B5A935D1F49368783 /* Pods_JinJo_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JinJo_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		982666F686944AFBACD8C3AE /* Pods_JinJo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JinJo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE9BCF30D067789BCEB6788 /* Pods-JinJo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOS/Pods-JinJo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B98AFECD1F8044C100B90F41 /* JinJo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JinJo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B98AFED01F8044C100B90F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B98AFED21F8044C100B90F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B98AFED51F8044C100B90F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B98AFED71F8044C100B90F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B98AFEDA1F8044C100B90F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B98AFEDC1F8044C100B90F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98AFEE11F8044C100B90F41 /* JinJo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JinJo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98AFEE51F8044C100B90F41 /* JinJo_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinJo_iOSTests.swift; sourceTree = "<group>"; };
 		B98AFEE71F8044C100B90F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98AFEEC1F8044C100B90F41 /* JinJo-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JinJo-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98AFEF01F8044C100B90F41 /* JinJo_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinJo_iOSUITests.swift; sourceTree = "<group>"; };
 		B98AFEF21F8044C100B90F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B98AFF141F8051AF00B90F41 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		B98AFF161F80528200B90F41 /* SplashLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashLogInViewController.swift; sourceTree = "<group>"; };
+		B98AFF181F8052F000B90F41 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B98AFF191F8052F000B90F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B98AFF1A1F8052F000B90F41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B98AFF1B1F8052F000B90F41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B98AFF201F805B0E00B90F41 /* SplashJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashJoinViewController.swift; sourceTree = "<group>"; };
+		B98AFF221F805B9600B90F41 /* SplashSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashSignUpViewController.swift; sourceTree = "<group>"; };
+		B98AFF261F805CE200B90F41 /* Courses.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Courses.storyboard; sourceTree = "<group>"; };
+		B98AFF2B1F805DF600B90F41 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
+		B98AFF2D1F805E0000B90F41 /* CoursesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursesTableViewCell.xib; sourceTree = "<group>"; };
+		B98AFF2F1F80609B00B90F41 /* String+URLEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLEncoding.swift"; sourceTree = "<group>"; };
+		B98AFF301F80609B00B90F41 /* UIView+Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shape.swift"; sourceTree = "<group>"; };
+		B98AFF331F80614800B90F41 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		B98AFF351F8087CA00B90F41 /* CourseRoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRoomsViewController.swift; sourceTree = "<group>"; };
+		B98AFF3B1F808AA600B90F41 /* CourseRoomsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRoomsTableViewCell.swift; sourceTree = "<group>"; };
+		B98AFF3D1F808AB300B90F41 /* CourseRoomsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseRoomsTableViewCell.xib; sourceTree = "<group>"; };
+		B98AFF3F1F808E8C00B90F41 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
+		B98AFF421F80922B00B90F41 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		B98AFF441F80924300B90F41 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
+		B98AFF461F8094A500B90F41 /* Room.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Room.storyboard; sourceTree = "<group>"; };
+		B98AFF481F80950D00B90F41 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		B98AFF4A1F80B42A00B90F41 /* AskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskViewController.swift; sourceTree = "<group>"; };
+		B98AFF4C1F80BA2200B90F41 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F56C2BC1DA2281F1B4EFB732 /* Pods-JinJo-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSTests/Pods-JinJo-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5F549263E0A2A3EC3A3ADA5 /* Pods-JinJo-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSUITests/Pods-JinJo-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9975239BDAADD1C9898212E0 /* Pods_JinJo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFA152B027C7702B199D67B /* Pods_JinJo_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +119,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2605B26F198A6B6693310EC4 /* Pods_JinJo_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62A18BD5682D9A09C6519B43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				982666F686944AFBACD8C3AE /* Pods_JinJo_iOS.framework */,
+				36CF0DF7E2EAB40923DE4A79 /* Pods_JinJo_iOSTests.framework */,
+				5567373B5A935D1F49368783 /* Pods_JinJo_iOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90984CB5DE1F7A824BC1A1C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A9DABD17FA0629618496B8C /* Pods-JinJo-iOS.debug.xcconfig */,
+				9FE9BCF30D067789BCEB6788 /* Pods-JinJo-iOS.release.xcconfig */,
+				F56C2BC1DA2281F1B4EFB732 /* Pods-JinJo-iOSTests.debug.xcconfig */,
+				03A493679B0949EBC0A905F2 /* Pods-JinJo-iOSTests.release.xcconfig */,
+				F5F549263E0A2A3EC3A3ADA5 /* Pods-JinJo-iOSUITests.debug.xcconfig */,
+				1D24D48680B551E1086C56BE /* Pods-JinJo-iOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B98AFEC41F8044C100B90F41 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +156,8 @@
 				B98AFEE41F8044C100B90F41 /* JinJo-iOSTests */,
 				B98AFEEF1F8044C100B90F41 /* JinJo-iOSUITests */,
 				B98AFECE1F8044C100B90F41 /* Products */,
+				90984CB5DE1F7A824BC1A1C5 /* Pods */,
+				62A18BD5682D9A09C6519B43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +174,13 @@
 		B98AFECF1F8044C100B90F41 /* JinJo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B98AFED01F8044C100B90F41 /* AppDelegate.swift */,
-				B98AFED21F8044C100B90F41 /* ViewController.swift */,
-				B98AFED41F8044C100B90F41 /* Main.storyboard */,
-				B98AFED71F8044C100B90F41 /* Assets.xcassets */,
-				B98AFED91F8044C100B90F41 /* LaunchScreen.storyboard */,
-				B98AFEDC1F8044C100B90F41 /* Info.plist */,
+				B98AFEFE1F804F7800B90F41 /* Supporting Files */,
+				B98AFEFF1F804F7800B90F41 /* Models */,
+				B98AFF001F804F7800B90F41 /* Services */,
+				B98AFF011F804F7800B90F41 /* Extensions */,
+				B98AFF021F804F7800B90F41 /* Helpers */,
+				B98AFF031F804F7800B90F41 /* Controllers */,
+				B98AFF041F804F7800B90F41 /* Views */,
 			);
 			path = "JinJo-iOS";
 			sourceTree = "<group>";
@@ -125,6 +203,127 @@
 			path = "JinJo-iOSUITests";
 			sourceTree = "<group>";
 		};
+		B98AFEFE1F804F7800B90F41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF181F8052F000B90F41 /* AppDelegate.swift */,
+				B98AFF191F8052F000B90F41 /* Assets.xcassets */,
+				B98AFF1A1F8052F000B90F41 /* Info.plist */,
+				B98AFF1B1F8052F000B90F41 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B98AFEFF1F804F7800B90F41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B98AFF001F804F7800B90F41 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF4C1F80BA2200B90F41 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B98AFF011F804F7800B90F41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF2F1F80609B00B90F41 /* String+URLEncoding.swift */,
+				B98AFF301F80609B00B90F41 /* UIView+Shape.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B98AFF021F804F7800B90F41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B98AFF031F804F7800B90F41 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF0D1F80509E00B90F41 /* Splash */,
+				B98AFF241F805CD400B90F41 /* Courses */,
+				B98AFF251F805CD400B90F41 /* Room */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B98AFF041F804F7800B90F41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF411F80921C00B90F41 /* RoomCell */,
+				B98AFF3A1F808A6F00B90F41 /* CourseRoomsCell */,
+				B98AFF2A1F805DF600B90F41 /* CoursesCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B98AFF0D1F80509E00B90F41 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF141F8051AF00B90F41 /* Splash.storyboard */,
+				B98AFF201F805B0E00B90F41 /* SplashJoinViewController.swift */,
+				B98AFF161F80528200B90F41 /* SplashLogInViewController.swift */,
+				B98AFF221F805B9600B90F41 /* SplashSignUpViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B98AFF241F805CD400B90F41 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF261F805CE200B90F41 /* Courses.storyboard */,
+				B98AFF331F80614800B90F41 /* CoursesViewController.swift */,
+				B98AFF351F8087CA00B90F41 /* CourseRoomsViewController.swift */,
+				B98AFF3F1F808E8C00B90F41 /* CreateRoomViewController.swift */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		B98AFF251F805CD400B90F41 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF461F8094A500B90F41 /* Room.storyboard */,
+				B98AFF481F80950D00B90F41 /* RoomViewController.swift */,
+				B98AFF4A1F80B42A00B90F41 /* AskViewController.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		B98AFF2A1F805DF600B90F41 /* CoursesCell */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF2B1F805DF600B90F41 /* CoursesTableViewCell.swift */,
+				B98AFF2D1F805E0000B90F41 /* CoursesTableViewCell.xib */,
+			);
+			path = CoursesCell;
+			sourceTree = "<group>";
+		};
+		B98AFF3A1F808A6F00B90F41 /* CourseRoomsCell */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF3B1F808AA600B90F41 /* CourseRoomsTableViewCell.swift */,
+				B98AFF3D1F808AB300B90F41 /* CourseRoomsTableViewCell.xib */,
+			);
+			path = CourseRoomsCell;
+			sourceTree = "<group>";
+		};
+		B98AFF411F80921C00B90F41 /* RoomCell */ = {
+			isa = PBXGroup;
+			children = (
+				B98AFF421F80922B00B90F41 /* RoomTableViewCell.swift */,
+				B98AFF441F80924300B90F41 /* RoomTableViewCell.xib */,
+			);
+			path = RoomCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B98AFEF51F8044C100B90F41 /* Build configuration list for PBXNativeTarget "JinJo-iOS" */;
 			buildPhases = (
+				5834410B6A0D35524CB8F14D /* [CP] Check Pods Manifest.lock */,
 				B98AFEC91F8044C100B90F41 /* Sources */,
 				B98AFECA1F8044C100B90F41 /* Frameworks */,
 				B98AFECB1F8044C100B90F41 /* Resources */,
+				77D877E08E9AFF29DC5A588F /* [CP] Embed Pods Frameworks */,
+				C9F84444E567AE01E0162A5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B98AFEF81F8044C100B90F41 /* Build configuration list for PBXNativeTarget "JinJo-iOSTests" */;
 			buildPhases = (
+				479AE53BDBA4ED0D2BD89F09 /* [CP] Check Pods Manifest.lock */,
 				B98AFEDD1F8044C100B90F41 /* Sources */,
 				B98AFEDE1F8044C100B90F41 /* Frameworks */,
 				B98AFEDF1F8044C100B90F41 /* Resources */,
+				1710B850137322DB7DB16084 /* [CP] Embed Pods Frameworks */,
+				D1EB98E62F92B31F75A0E581 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B98AFEFB1F8044C100B90F41 /* Build configuration list for PBXNativeTarget "JinJo-iOSUITests" */;
 			buildPhases = (
+				15A98DC983F9F72131200044 /* [CP] Check Pods Manifest.lock */,
 				B98AFEE81F8044C100B90F41 /* Sources */,
 				B98AFEE91F8044C100B90F41 /* Frameworks */,
 				B98AFEEA1F8044C100B90F41 /* Resources */,
+				CA873F0E2F8BE60894C878AA /* [CP] Embed Pods Frameworks */,
+				2AFEEDB28D7EF038A104380F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,7 +401,8 @@
 				TargetAttributes = {
 					B98AFECC1F8044C100B90F41 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 28636835Z7;
+						DevelopmentTeam = 5BNC8N825B;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					B98AFEE01F8044C100B90F41 = {
@@ -235,9 +444,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98AFEDB1F8044C100B90F41 /* LaunchScreen.storyboard in Resources */,
-				B98AFED81F8044C100B90F41 /* Assets.xcassets in Resources */,
-				B98AFED61F8044C100B90F41 /* Main.storyboard in Resources */,
+				B98AFF2E1F805E0000B90F41 /* CoursesTableViewCell.xib in Resources */,
+				B98AFF3E1F808AB300B90F41 /* CourseRoomsTableViewCell.xib in Resources */,
+				B98AFF271F805CE200B90F41 /* Courses.storyboard in Resources */,
+				B98AFF471F8094A500B90F41 /* Room.storyboard in Resources */,
+				B98AFF1E1F8052F000B90F41 /* Info.plist in Resources */,
+				B98AFF1D1F8052F000B90F41 /* Assets.xcassets in Resources */,
+				B98AFF1F1F8052F000B90F41 /* LaunchScreen.storyboard in Resources */,
+				B98AFF451F80924300B90F41 /* RoomTableViewCell.xib in Resources */,
+				B98AFF151F8051AF00B90F41 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +472,164 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15A98DC983F9F72131200044 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1710B850137322DB7DB16084 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JinJo-iOSTests/Pods-JinJo-iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AFEEDB28D7EF038A104380F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JinJo-iOSUITests/Pods-JinJo-iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		479AE53BDBA4ED0D2BD89F09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5834410B6A0D35524CB8F14D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77D877E08E9AFF29DC5A588F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JinJo-iOS/Pods-JinJo-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9F84444E567AE01E0162A5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JinJo-iOS/Pods-JinJo-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA873F0E2F8BE60894C878AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JinJo-iOSUITests/Pods-JinJo-iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1EB98E62F92B31F75A0E581 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JinJo-iOSTests/Pods-JinJo-iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B98AFEC91F8044C100B90F41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98AFED31F8044C100B90F41 /* ViewController.swift in Sources */,
-				B98AFED11F8044C100B90F41 /* AppDelegate.swift in Sources */,
+				B98AFF1C1F8052F000B90F41 /* AppDelegate.swift in Sources */,
+				B98AFF341F80614800B90F41 /* CoursesViewController.swift in Sources */,
+				B98AFF491F80950D00B90F41 /* RoomViewController.swift in Sources */,
+				B98AFF321F80609B00B90F41 /* UIView+Shape.swift in Sources */,
+				B98AFF311F80609B00B90F41 /* String+URLEncoding.swift in Sources */,
+				B98AFF211F805B0E00B90F41 /* SplashJoinViewController.swift in Sources */,
+				B98AFF4B1F80B42A00B90F41 /* AskViewController.swift in Sources */,
+				B98AFF3C1F808AA600B90F41 /* CourseRoomsTableViewCell.swift in Sources */,
+				B98AFF431F80922B00B90F41 /* RoomTableViewCell.swift in Sources */,
+				B98AFF231F805B9600B90F41 /* SplashSignUpViewController.swift in Sources */,
+				B98AFF2C1F805DF600B90F41 /* CoursesTableViewCell.swift in Sources */,
+				B98AFF4D1F80BA2200B90F41 /* UserService.swift in Sources */,
+				B98AFF361F8087CA00B90F41 /* CourseRoomsViewController.swift in Sources */,
+				B98AFF401F808E8C00B90F41 /* CreateRoomViewController.swift in Sources */,
+				B98AFF171F80528200B90F41 /* SplashLogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,25 +663,6 @@
 			targetProxy = B98AFEED1F8044C100B90F41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B98AFED41F8044C100B90F41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B98AFED51F8044C100B90F41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B98AFED91F8044C100B90F41 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B98AFEDA1F8044C100B90F41 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B98AFEF31F8044C100B90F41 /* Debug */ = {
@@ -415,23 +762,28 @@
 		};
 		B98AFEF61F8044C100B90F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A9DABD17FA0629618496B8C /* Pods-JinJo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 28636835Z7;
-				INFOPLIST_FILE = "JinJo-iOS/Info.plist";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 5BNC8N825B;
+				INFOPLIST_FILE = "$(SRCROOT)/JinJo-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pacolee.JinJo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B98AFEF71F8044C100B90F41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE9BCF30D067789BCEB6788 /* Pods-JinJo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 28636835Z7;
-				INFOPLIST_FILE = "JinJo-iOS/Info.plist";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 5BNC8N825B;
+				INFOPLIST_FILE = "$(SRCROOT)/JinJo-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pacolee.JinJo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +793,7 @@
 		};
 		B98AFEF91F8044C100B90F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56C2BC1DA2281F1B4EFB732 /* Pods-JinJo-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +809,7 @@
 		};
 		B98AFEFA1F8044C100B90F41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A493679B0949EBC0A905F2 /* Pods-JinJo-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +825,7 @@
 		};
 		B98AFEFC1F8044C100B90F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5F549263E0A2A3EC3A3ADA5 /* Pods-JinJo-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 28636835Z7;
@@ -485,6 +840,7 @@
 		};
 		B98AFEFD1F8044C100B90F41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D24D48680B551E1086C56BE /* Pods-JinJo-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 28636835Z7;
@@ -516,6 +872,7 @@
 				B98AFEF71F8044C100B90F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B98AFEF81F8044C100B90F41 /* Build configuration list for PBXNativeTarget "JinJo-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +881,7 @@
 				B98AFEFA1F8044C100B90F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B98AFEFB1F8044C100B90F41 /* Build configuration list for PBXNativeTarget "JinJo-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +890,7 @@
 				B98AFEFD1F8044C100B90F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

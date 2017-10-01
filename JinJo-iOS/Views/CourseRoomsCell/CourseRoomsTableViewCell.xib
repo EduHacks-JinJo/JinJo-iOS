@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="wzE-MN-oZO" customClass="CourseRoomsTableViewCell" customModule="JinJo_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNH-6t-Tas">
+                    <rect key="frame" x="8" y="8" width="359" height="109"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9/29/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-ws-6GO">
+                            <rect key="frame" x="128" y="36.5" width="103" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Mjp-ws-6GO" firstAttribute="centerX" secondItem="eNH-6t-Tas" secondAttribute="centerX" id="9GP-me-AnA"/>
+                        <constraint firstItem="Mjp-ws-6GO" firstAttribute="centerY" secondItem="eNH-6t-Tas" secondAttribute="centerY" id="EVL-Hx-RWT"/>
+                        <constraint firstAttribute="width" constant="359" id="nvS-ia-0qa"/>
+                        <constraint firstAttribute="height" constant="109" id="upf-Un-NOl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eNH-6t-Tas" firstAttribute="top" secondItem="wzE-MN-oZO" secondAttribute="top" constant="8" id="R3W-ok-1IX"/>
+                <constraint firstAttribute="bottom" secondItem="eNH-6t-Tas" secondAttribute="bottom" constant="8" id="S1D-Vj-diX"/>
+                <constraint firstAttribute="trailing" secondItem="eNH-6t-Tas" secondAttribute="trailing" constant="8" id="Ydr-7q-mrl"/>
+                <constraint firstItem="eNH-6t-Tas" firstAttribute="leading" secondItem="wzE-MN-oZO" secondAttribute="leading" constant="8" id="ptD-Ee-On3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="courseNameLabel" destination="Mjp-ws-6GO" id="PZJ-OG-FiO"/>
+                <outlet property="view" destination="eNH-6t-Tas" id="jwu-JO-sL1"/>
+            </connections>
+            <point key="canvasLocation" x="122.5" y="-236.5"/>
+        </view>
+    </objects>
+</document>
