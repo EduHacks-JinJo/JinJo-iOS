@@ -26,8 +26,6 @@ class CoursesTableViewCell: UITableViewCell {
     
     private func setupUI() {
         view.round(cornerRadius: 6.0)
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 1.0
         selectionStyle = .none
         
         backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 1.0)
