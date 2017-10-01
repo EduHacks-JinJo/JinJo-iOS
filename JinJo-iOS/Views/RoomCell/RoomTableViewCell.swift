@@ -40,20 +40,27 @@ class RoomTableViewCell: UITableViewCell {
         if roomControllerState == .instructor {
             voteButton.isHidden = true
             answeredLabel.isHidden = false
+            
+            if let isAnswered = question.isAnswered {
+                if isAnswered {
+                    answeredLabel.text = "Answered"
+                    answeredLabel.textColor = UIColor.red
+                } else {
+                    answeredLabel.text = "Unaswered"
+                    answeredLabel.textColor = UIColor.black
+                }
+            }
         } else {
             voteButton.isHidden = false
             answeredLabel.isHidden = true
-        }
-        
-        if let isAnswered = question.isAnswered {
-            if isAnswered {
-                voteButton.isHidden = true
-                answeredLabel.isHidden = false
-                answeredLabel.text = "Answered"
-                answeredLabel.textColor = UIColor.red
-            } else {
-                answeredLabel.text = "Unaswered"
-                answeredLabel.textColor = UIColor.black
+            
+            if let isAnswered = question.isAnswered {
+                if isAnswered {
+                    voteButton.isHidden = true
+                    answeredLabel.isHidden = false
+                    answeredLabel.text = "Answered"
+                    answeredLabel.textColor = UIColor.red
+                }
             }
         }
     }

@@ -27,12 +27,14 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9w-wu-FJZ">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.41959643359999999" green="0.73057013749999999" blue="0.71975094080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="U7D-c8-w1l"/>
                                 </constraints>
                                 <color key="tintColor" red="0.41959643359999999" green="0.73057013749999999" blue="0.71975094080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Ask Question"/>
+                                <state key="normal" title="Ask Question">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="askQuestionAction:" destination="9bq-7I-I3S" eventType="touchUpInside" id="0hH-ab-dYT"/>
                                 </connections>
