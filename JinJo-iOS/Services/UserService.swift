@@ -27,7 +27,8 @@ class UserService {
                     completion(false)
                 }
                 
-            case .failure:
+            case .failure(let error):
+                print(error)
                 completion(false)
             }
         }

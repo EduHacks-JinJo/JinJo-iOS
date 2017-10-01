@@ -14,15 +14,23 @@ class CourseRoomsTableViewCell: UITableViewCell {
 
     @IBOutlet var view: UIView!
     @IBOutlet var courseNameLabel: UILabel!
-    
+    var room: Room!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
     
-    func config(course: String) {
-        courseNameLabel.text = course
+    func config(room: Room) {
+        self.room = room
+        
+        if let roomName = room.classname {
+            courseNameLabel.text = roomName
+        } else if let date = room.date {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            courseNameLabel.text = dateFormatter.string(from: date)
+        }
     }
         
     private func setupUI() {

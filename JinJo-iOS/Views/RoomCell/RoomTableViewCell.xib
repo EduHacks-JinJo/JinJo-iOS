@@ -42,16 +42,26 @@
                                         <action selector="voteAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fei-OB-sMh"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-jr-QZi">
+                                    <rect key="frame" x="0.0" y="38.5" width="100" height="38.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="6ZD-28-oCh" firstAttribute="top" secondItem="1CC-Eh-1lx" secondAttribute="top" id="0bn-tA-gEE"/>
                                 <constraint firstAttribute="width" constant="100" id="1aQ-Rl-mFX"/>
+                                <constraint firstAttribute="bottom" secondItem="Nai-jr-QZi" secondAttribute="bottom" id="2Ra-rE-sXw"/>
                                 <constraint firstAttribute="trailing" secondItem="ZFT-QW-M8r" secondAttribute="trailing" id="8Ry-Pb-O1x"/>
                                 <constraint firstAttribute="bottom" secondItem="ZFT-QW-M8r" secondAttribute="bottom" id="KMd-tg-8uh"/>
+                                <constraint firstAttribute="trailing" secondItem="Nai-jr-QZi" secondAttribute="trailing" id="Lc0-Rd-8EN"/>
                                 <constraint firstItem="ZFT-QW-M8r" firstAttribute="leading" secondItem="1CC-Eh-1lx" secondAttribute="leading" id="O1z-sm-72X"/>
                                 <constraint firstItem="6ZD-28-oCh" firstAttribute="leading" secondItem="1CC-Eh-1lx" secondAttribute="leading" id="O5H-cu-wiK"/>
                                 <constraint firstItem="ZFT-QW-M8r" firstAttribute="top" secondItem="6ZD-28-oCh" secondAttribute="bottom" id="UZe-rB-BFC"/>
+                                <constraint firstItem="Nai-jr-QZi" firstAttribute="height" secondItem="ZFT-QW-M8r" secondAttribute="height" id="Unw-aH-79Z"/>
+                                <constraint firstItem="Nai-jr-QZi" firstAttribute="leading" secondItem="1CC-Eh-1lx" secondAttribute="leading" id="qQw-dn-tPW"/>
                                 <constraint firstAttribute="trailing" secondItem="6ZD-28-oCh" secondAttribute="trailing" id="qom-No-yE4"/>
                             </constraints>
                         </view>
@@ -88,11 +98,10 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="answeredLabel" destination="Nai-jr-QZi" id="UKx-mA-IDR"/>
                 <outlet property="questionLabel" destination="0pH-vZ-GwD" id="wOb-va-PbT"/>
                 <outlet property="view" destination="ql1-5a-U3W" id="vDg-7L-IPJ"/>
                 <outlet property="voteButton" destination="ZFT-QW-M8r" id="HyV-s4-mH0"/>
-                <outlet property="voteButtonHeight" destination="pOf-Yl-RkE" id="J0F-hw-KcC"/>
-                <outlet property="voteLabelHeight" destination="3Cr-wb-y8E" id="Fu3-Rm-mxV"/>
                 <outlet property="votesLabel" destination="6ZD-28-oCh" id="hha-oI-IX9"/>
             </connections>
             <point key="canvasLocation" x="102.5" y="-192.5"/>

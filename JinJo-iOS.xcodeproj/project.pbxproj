@@ -36,6 +36,9 @@
 		B98AFF491F80950D00B90F41 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF481F80950D00B90F41 /* RoomViewController.swift */; };
 		B98AFF4B1F80B42A00B90F41 /* AskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF4A1F80B42A00B90F41 /* AskViewController.swift */; };
 		B98AFF4D1F80BA2200B90F41 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF4C1F80BA2200B90F41 /* UserService.swift */; };
+		B98AFF4F1F813DB300B90F41 /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF4E1F813DB300B90F41 /* RoomService.swift */; };
+		B98AFF511F814C5200B90F41 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF501F814C5200B90F41 /* Room.swift */; };
+		B98AFF531F81599B00B90F41 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF521F81599B00B90F41 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		B98AFF481F80950D00B90F41 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		B98AFF4A1F80B42A00B90F41 /* AskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskViewController.swift; sourceTree = "<group>"; };
 		B98AFF4C1F80BA2200B90F41 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B98AFF4E1F813DB300B90F41 /* RoomService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomService.swift; sourceTree = "<group>"; };
+		B98AFF501F814C5200B90F41 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		B98AFF521F81599B00B90F41 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F56C2BC1DA2281F1B4EFB732 /* Pods-JinJo-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSTests/Pods-JinJo-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5F549263E0A2A3EC3A3ADA5 /* Pods-JinJo-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSUITests/Pods-JinJo-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +223,8 @@
 		B98AFEFF1F804F7800B90F41 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B98AFF501F814C5200B90F41 /* Room.swift */,
+				B98AFF521F81599B00B90F41 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				B98AFF4C1F80BA2200B90F41 /* UserService.swift */,
+				B98AFF4E1F813DB300B90F41 /* RoomService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -618,6 +627,8 @@
 				B98AFF1C1F8052F000B90F41 /* AppDelegate.swift in Sources */,
 				B98AFF341F80614800B90F41 /* CoursesViewController.swift in Sources */,
 				B98AFF491F80950D00B90F41 /* RoomViewController.swift in Sources */,
+				B98AFF531F81599B00B90F41 /* Question.swift in Sources */,
+				B98AFF511F814C5200B90F41 /* Room.swift in Sources */,
 				B98AFF321F80609B00B90F41 /* UIView+Shape.swift in Sources */,
 				B98AFF311F80609B00B90F41 /* String+URLEncoding.swift in Sources */,
 				B98AFF211F805B0E00B90F41 /* SplashJoinViewController.swift in Sources */,
@@ -625,6 +636,7 @@
 				B98AFF3C1F808AA600B90F41 /* CourseRoomsTableViewCell.swift in Sources */,
 				B98AFF431F80922B00B90F41 /* RoomTableViewCell.swift in Sources */,
 				B98AFF231F805B9600B90F41 /* SplashSignUpViewController.swift in Sources */,
+				B98AFF4F1F813DB300B90F41 /* RoomService.swift in Sources */,
 				B98AFF2C1F805DF600B90F41 /* CoursesTableViewCell.swift in Sources */,
 				B98AFF4D1F80BA2200B90F41 /* UserService.swift in Sources */,
 				B98AFF361F8087CA00B90F41 /* CourseRoomsViewController.swift in Sources */,

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RoomControllerDelegate {
+    func retrieveQuestions()
+}
+
 enum RoomControllerState {
     case instructor
     case student
@@ -16,8 +20,7 @@ enum RoomControllerState {
 class RoomViewController: UIViewController {
     static let identifier = "RoomViewController"
 
-    var questions = ["Why are you white?"]
-    var votes = ["0"]
+    var questions = [Question]()
     
     var roomControllerState: RoomControllerState!
     var roomID: String!
@@ -29,6 +32,11 @@ class RoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getQuestions()
     }
     
     func config(roomID: String, roomControllerState: RoomControllerState) {
@@ -62,8 +70,16 @@ class RoomViewController: UIViewController {
         tableView.separatorStyle = .none
     }
     
+    func getQuestions() {
+        RoomService.shared.getQuestions(roomID: roomID) { (success, questions) in
+            self.questions = questions
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBAction func askQuestionAction(_ sender: Any) {
-        let vc = UIStoryboard(name: "Room", bundle: nil).instantiateViewController(withIdentifier: AskViewController.identifier)
+        let vc = UIStoryboard(name: "Room", bundle: nil).instantiateViewController(withIdentifier: AskViewController.identifier) as! AskViewController
+        vc.config(roomID: roomID)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -81,7 +97,13 @@ class RoomViewController: UIViewController {
 
 extension RoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let id = questions[indexPath.row].id {
+            RoomService.shared.answer(id: id) { (success) in
+                if success {
+                    self.getQuestions()
+                }
+            }
+        }
     }
 }
 
@@ -92,8 +114,14 @@ extension RoomViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.identifier, for: indexPath) as! RoomTableViewCell
-        cell.config(question: questions[indexPath.row], votes: votes[indexPath.row], roomControllerState: roomControllerState)
+        cell.config(question: questions[indexPath.row], roomControllerState: roomControllerState, roomControllerDelegate: self)
         return cell
+    }
+}
+
+extension RoomViewController: RoomControllerDelegate {
+    func retrieveQuestions() {
+        getQuestions()
     }
 }
 

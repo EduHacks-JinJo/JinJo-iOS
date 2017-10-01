@@ -24,6 +24,16 @@ class CreateRoomViewController: UIViewController {
     }
     
     @IBAction func createRoom(_ sender: Any) {
+        guard let courseID = courseTextField.text, courseID != "" else {
+            return
+        }
         
+        let classname = nameTextField.text ?? ""
+        
+        RoomService.shared.createRoom(courseID: courseID, classname: classname) { (success) in
+            if success {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

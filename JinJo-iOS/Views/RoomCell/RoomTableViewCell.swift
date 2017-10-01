@@ -18,14 +18,20 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet var view: UIView!
     @IBOutlet var voteButtonHeight: NSLayoutConstraint!
     @IBOutlet var voteLabelHeight: NSLayoutConstraint!
+    @IBOutlet var answeredLabel: UILabel!
+    
+    var question: Question!
+    var delegate: RoomControllerDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func config(question: String, votes: String, roomControllerState: RoomControllerState) {
-        questionLabel.text = question
-        votesLabel.text = votes
+    func config(question: Question, roomControllerState: RoomControllerState, roomControllerDelegate: RoomControllerDelegate) {
+        self.question = question
+        self.delegate = roomControllerDelegate
+        questionLabel.text = question.question
+        votesLabel.text = "\(question.upvotes ?? 0)"
         
         view.round(cornerRadius: 6.0)
         view.layer.borderColor = UIColor.black.cgColor
@@ -35,16 +41,32 @@ class RoomTableViewCell: UITableViewCell {
         
         if roomControllerState == .instructor {
             voteButton.isHidden = true
-            voteLabelHeight.constant = 38.5 * 2
-            voteButtonHeight.constant = 0
+            answeredLabel.isHidden = false
         } else {
             voteButton.isHidden = false
-            voteLabelHeight.constant = 38.5
-            voteButtonHeight.constant = 38.5
+            answeredLabel.isHidden = true
+        }
+        
+        if let isAnswered = question.isAnswered {
+            if isAnswered {
+                voteButton.isHidden = true
+                answeredLabel.isHidden = false
+                answeredLabel.text = "Answered"
+                answeredLabel.textColor = UIColor.red
+            } else {
+                answeredLabel.text = "Unaswered"
+                answeredLabel.textColor = UIColor.black
+            }
         }
     }
     
     @IBAction func voteAction(_ sender: Any) {
-        
+        if let id = question.id {
+            RoomService.shared.upvote(id: id, completion: { (success) in
+                if success {
+                    self.delegate.retrieveQuestions()
+                }
+            })
+        }
     }
 }
