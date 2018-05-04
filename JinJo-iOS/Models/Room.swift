@@ -12,22 +12,15 @@ import ObjectMapper
 class Room: Mappable {
     
     var id: String?
-    var roomID: String?
-    var teacherID: String?
-    var date: Date?
-    var classname: String?
-    var courseName: String?
-    var courseID: String?
+    var instructorID: String?
+    var roomName: String?
     
     required public init?(map: Map) { }
     
     public func mapping(map: Map) {
-        id <- map["_id"]
-        roomID <- map["roomID"]
-        teacherID <- map["teacherID"]
-        date <- (map["date"], DateTransform())
-        classname <- map["classname"]
-        courseID <- map["courseID"]
+        id <- map["id"]
+        instructorID <- map["instructorID"]
+        roomName <- map["roomName"]
     }
     
 }

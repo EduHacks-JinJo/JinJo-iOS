@@ -11,19 +11,19 @@ import ObjectMapper
 
 class Question: Mappable {
     
-    var id: String?
+    var id: Int?
     var question: String?
     var upvotes: Int?
-    var classID: String?
+    var roomID: Int?
     var isAnswered: Bool?
     
     required public init?(map: Map) { }
     
     public func mapping(map: Map) {
-        id <- map["_id"]
+        id <- map["id"]
         question <- map["question"]
         upvotes <- map["upvotes"]
-        classID <- map["classID"]
+        roomID <- map["roomID"]
         isAnswered <- map["isAnswered"]
     }
     
