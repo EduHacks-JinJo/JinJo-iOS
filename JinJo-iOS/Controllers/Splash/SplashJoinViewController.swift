@@ -26,11 +26,15 @@ class SplashJoinViewController: UIViewController {
     }
     
     @IBAction func joinRoom(_ sender: Any) {
-        if let roomID = roomTextField.text, roomID != "" {
-            let vc = UIStoryboard(name: "Room", bundle: nil).instantiateViewController(withIdentifier: RoomViewController.identifier) as! RoomViewController
-            vc.config(roomID: roomID, roomControllerState: .student)
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+        if let roomID = roomTextField.text, roomID != "", let roomIDInt = Int(roomID) {
+            RoomService.sharedService.getRoom(roomID: roomIDInt) { (result) in
+                if let room = result.value {
+                    let vc = UIStoryboard(name: "Room", bundle: nil).instantiateViewController(withIdentifier: RoomViewController.identifier) as! RoomViewController
+                    vc.config(room: room, roomControllerState: .student)
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+                }
+            }
         }
     }
     

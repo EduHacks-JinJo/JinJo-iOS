@@ -15,7 +15,7 @@ class AskViewController: UIViewController {
     @IBOutlet var postButton: UIButton!
     @IBOutlet var textView: UITextView!
     
-    var roomID: String!
+    var room: Room!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class AskViewController: UIViewController {
         textView.becomeFirstResponder()
     }
     
-    func config(roomID: String) {
-        self.roomID = roomID
+    func config(room: Room) {
+        self.room = room
     }
     
     private func setup() {
@@ -42,13 +42,12 @@ class AskViewController: UIViewController {
     }
     
     @IBAction func postAction(_ sender: Any) {
-        
-        if let question = textView.text, question != "" {
-            RoomService.shared.postQuestion(roomID: roomID, question: question, completion: { (success) in
-                if success {
+        if let question = textView.text, question != "", let roomID = room.id {
+            QuestionService.sharedService.addQuestion(question: question, roomID: roomID) { (result) in
+                if result.isSuccess {
                     self.navigationController?.popViewController(animated: true)
                 }
-            })
+            }
         }
     }
 }

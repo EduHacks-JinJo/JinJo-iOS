@@ -21,9 +21,9 @@ class RoomViewController: UIViewController {
     static let identifier = "RoomViewController"
 
     var questions = [Question]()
+    var room: Room!
     
     var roomControllerState: RoomControllerState!
-    var roomID: String!
     
     @IBOutlet var questionButton: UIButton!
     @IBOutlet var tableView: UITableView!
@@ -39,11 +39,13 @@ class RoomViewController: UIViewController {
         getQuestions()
     }
     
-    func config(roomID: String, roomControllerState: RoomControllerState) {
-        self.roomID = roomID
+    func config(room: Room, roomControllerState: RoomControllerState) {
+        self.room = room
         self.roomControllerState = roomControllerState
         
-        title = "Room ID: \(roomID)"
+        if let roomName = room.roomName {
+            title = "Room ID: \(roomName)"
+        }
     }
     
     private func setup() {
@@ -71,15 +73,19 @@ class RoomViewController: UIViewController {
     }
     
     func getQuestions() {
-        RoomService.shared.getQuestions(roomID: roomID) { (success, questions) in
-            self.questions = questions
-            self.tableView.reloadData()
+        if let roomID = room.id {
+            QuestionService.sharedService.getQuestions(roomID: roomID) { (result) in
+                if let questions = result.value {
+                    self.questions = questions
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
     
     @IBAction func askQuestionAction(_ sender: Any) {
         let vc = UIStoryboard(name: "Room", bundle: nil).instantiateViewController(withIdentifier: AskViewController.identifier) as! AskViewController
-        vc.config(roomID: roomID)
+        vc.config(room: room)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -98,8 +104,8 @@ class RoomViewController: UIViewController {
 extension RoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let id = questions[indexPath.row].id {
-            RoomService.shared.answer(id: id) { (success) in
-                if success {
+            QuestionService.sharedService.answerQuestion(questionID: id) { (result) in
+                if result.isSuccess {
                     self.getQuestions()
                 }
             }
@@ -124,4 +130,3 @@ extension RoomViewController: RoomControllerDelegate {
         getQuestions()
     }
 }
-

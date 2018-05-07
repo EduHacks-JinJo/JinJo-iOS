@@ -16,8 +16,6 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet var voteButton: UIButton!
     @IBOutlet var votesLabel: UILabel!
     @IBOutlet var view: UIView!
-    @IBOutlet var voteButtonHeight: NSLayoutConstraint!
-    @IBOutlet var voteLabelHeight: NSLayoutConstraint!
     @IBOutlet var answeredLabel: UILabel!
     
     var question: Question!
@@ -67,11 +65,11 @@ class RoomTableViewCell: UITableViewCell {
     
     @IBAction func voteAction(_ sender: Any) {
         if let id = question.id {
-            RoomService.shared.upvote(id: id, completion: { (success) in
-                if success {
+            QuestionService.sharedService.likeQuestion(questionID: id) { (result) in
+                if result.isSuccess {
                     self.delegate.retrieveQuestions()
                 }
-            })
+            }
         }
     }
 }

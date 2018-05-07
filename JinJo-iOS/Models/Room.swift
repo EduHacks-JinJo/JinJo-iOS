@@ -11,8 +11,8 @@ import ObjectMapper
 
 class Room: Mappable {
     
-    var id: String?
-    var instructorID: String?
+    var id: Int?
+    var instructorID: Int?
     var roomName: String?
     
     required public init?(map: Map) { }
