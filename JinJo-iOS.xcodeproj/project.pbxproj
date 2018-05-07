@@ -20,16 +20,12 @@
 		B98AFF1F1F8052F000B90F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF1B1F8052F000B90F41 /* LaunchScreen.storyboard */; };
 		B98AFF211F805B0E00B90F41 /* SplashJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF201F805B0E00B90F41 /* SplashJoinViewController.swift */; };
 		B98AFF231F805B9600B90F41 /* SplashSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF221F805B9600B90F41 /* SplashSignUpViewController.swift */; };
-		B98AFF271F805CE200B90F41 /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF261F805CE200B90F41 /* Courses.storyboard */; };
 		B98AFF2C1F805DF600B90F41 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF2B1F805DF600B90F41 /* CoursesTableViewCell.swift */; };
 		B98AFF2E1F805E0000B90F41 /* CoursesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF2D1F805E0000B90F41 /* CoursesTableViewCell.xib */; };
 		B98AFF311F80609B00B90F41 /* String+URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF2F1F80609B00B90F41 /* String+URLEncoding.swift */; };
 		B98AFF321F80609B00B90F41 /* UIView+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF301F80609B00B90F41 /* UIView+Shape.swift */; };
-		B98AFF341F80614800B90F41 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF331F80614800B90F41 /* CoursesViewController.swift */; };
-		B98AFF361F8087CA00B90F41 /* CourseRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF351F8087CA00B90F41 /* CourseRoomsViewController.swift */; };
 		B98AFF3C1F808AA600B90F41 /* CourseRoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF3B1F808AA600B90F41 /* CourseRoomsTableViewCell.swift */; };
 		B98AFF3E1F808AB300B90F41 /* CourseRoomsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF3D1F808AB300B90F41 /* CourseRoomsTableViewCell.xib */; };
-		B98AFF401F808E8C00B90F41 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF3F1F808E8C00B90F41 /* CreateRoomViewController.swift */; };
 		B98AFF431F80922B00B90F41 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AFF421F80922B00B90F41 /* RoomTableViewCell.swift */; };
 		B98AFF451F80924300B90F41 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF441F80924300B90F41 /* RoomTableViewCell.xib */; };
 		B98AFF471F8094A500B90F41 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98AFF461F8094A500B90F41 /* Room.storyboard */; };
@@ -42,6 +38,10 @@
 		B9D0F08F209D0E8C00A530BF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0F08E209D0E8C00A530BF /* APIClient.swift */; };
 		B9D0F091209D191800A530BF /* InstructorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0F090209D191800A530BF /* InstructorService.swift */; };
 		B9D0F093209D1E8300A530BF /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0F092209D1E8300A530BF /* QuestionService.swift */; };
+		B9FB646220A11771005D0C78 /* CourseRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB645E20A11771005D0C78 /* CourseRoomsViewController.swift */; };
+		B9FB646320A11771005D0C78 /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FB645F20A11771005D0C78 /* Courses.storyboard */; };
+		B9FB646420A11771005D0C78 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB646020A11771005D0C78 /* CoursesViewController.swift */; };
+		B9FB646520A11771005D0C78 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB646120A11771005D0C78 /* CreateRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,16 +84,12 @@
 		B98AFF1B1F8052F000B90F41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98AFF201F805B0E00B90F41 /* SplashJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashJoinViewController.swift; sourceTree = "<group>"; };
 		B98AFF221F805B9600B90F41 /* SplashSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashSignUpViewController.swift; sourceTree = "<group>"; };
-		B98AFF261F805CE200B90F41 /* Courses.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Courses.storyboard; sourceTree = "<group>"; };
 		B98AFF2B1F805DF600B90F41 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		B98AFF2D1F805E0000B90F41 /* CoursesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursesTableViewCell.xib; sourceTree = "<group>"; };
 		B98AFF2F1F80609B00B90F41 /* String+URLEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLEncoding.swift"; sourceTree = "<group>"; };
 		B98AFF301F80609B00B90F41 /* UIView+Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shape.swift"; sourceTree = "<group>"; };
-		B98AFF331F80614800B90F41 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
-		B98AFF351F8087CA00B90F41 /* CourseRoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRoomsViewController.swift; sourceTree = "<group>"; };
 		B98AFF3B1F808AA600B90F41 /* CourseRoomsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRoomsTableViewCell.swift; sourceTree = "<group>"; };
 		B98AFF3D1F808AB300B90F41 /* CourseRoomsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseRoomsTableViewCell.xib; sourceTree = "<group>"; };
-		B98AFF3F1F808E8C00B90F41 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		B98AFF421F80922B00B90F41 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		B98AFF441F80924300B90F41 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
 		B98AFF461F8094A500B90F41 /* Room.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Room.storyboard; sourceTree = "<group>"; };
@@ -106,6 +102,10 @@
 		B9D0F08E209D0E8C00A530BF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B9D0F090209D191800A530BF /* InstructorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorService.swift; sourceTree = "<group>"; };
 		B9D0F092209D1E8300A530BF /* QuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
+		B9FB645E20A11771005D0C78 /* CourseRoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRoomsViewController.swift; sourceTree = "<group>"; };
+		B9FB645F20A11771005D0C78 /* Courses.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Courses.storyboard; sourceTree = "<group>"; };
+		B9FB646020A11771005D0C78 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		B9FB646120A11771005D0C78 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		F56C2BC1DA2281F1B4EFB732 /* Pods-JinJo-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSTests/Pods-JinJo-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5F549263E0A2A3EC3A3ADA5 /* Pods-JinJo-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JinJo-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JinJo-iOSUITests/Pods-JinJo-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,8 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				B98AFF0D1F80509E00B90F41 /* Splash */,
-				B98AFF241F805CD400B90F41 /* Courses */,
 				B98AFF251F805CD400B90F41 /* Room */,
+				B9FB645D20A11771005D0C78 /* Courses */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,17 +292,6 @@
 				B98AFF221F805B9600B90F41 /* SplashSignUpViewController.swift */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		B98AFF241F805CD400B90F41 /* Courses */ = {
-			isa = PBXGroup;
-			children = (
-				B98AFF261F805CE200B90F41 /* Courses.storyboard */,
-				B98AFF331F80614800B90F41 /* CoursesViewController.swift */,
-				B98AFF351F8087CA00B90F41 /* CourseRoomsViewController.swift */,
-				B98AFF3F1F808E8C00B90F41 /* CreateRoomViewController.swift */,
-			);
-			path = Courses;
 			sourceTree = "<group>";
 		};
 		B98AFF251F805CD400B90F41 /* Room */ = {
@@ -340,6 +329,17 @@
 				B98AFF441F80924300B90F41 /* RoomTableViewCell.xib */,
 			);
 			path = RoomCell;
+			sourceTree = "<group>";
+		};
+		B9FB645D20A11771005D0C78 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				B9FB645E20A11771005D0C78 /* CourseRoomsViewController.swift */,
+				B9FB645F20A11771005D0C78 /* Courses.storyboard */,
+				B9FB646020A11771005D0C78 /* CoursesViewController.swift */,
+				B9FB646120A11771005D0C78 /* CreateRoomViewController.swift */,
+			);
+			path = Courses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,11 +464,11 @@
 			files = (
 				B98AFF2E1F805E0000B90F41 /* CoursesTableViewCell.xib in Resources */,
 				B98AFF3E1F808AB300B90F41 /* CourseRoomsTableViewCell.xib in Resources */,
-				B98AFF271F805CE200B90F41 /* Courses.storyboard in Resources */,
 				B98AFF471F8094A500B90F41 /* Room.storyboard in Resources */,
 				B98AFF1E1F8052F000B90F41 /* Info.plist in Resources */,
 				B98AFF1D1F8052F000B90F41 /* Assets.xcassets in Resources */,
 				B98AFF1F1F8052F000B90F41 /* LaunchScreen.storyboard in Resources */,
+				B9FB646320A11771005D0C78 /* Courses.storyboard in Resources */,
 				B98AFF451F80924300B90F41 /* RoomTableViewCell.xib in Resources */,
 				B98AFF151F8051AF00B90F41 /* Splash.storyboard in Resources */,
 			);
@@ -635,13 +635,15 @@
 			files = (
 				B9D0F091209D191800A530BF /* InstructorService.swift in Sources */,
 				B98AFF1C1F8052F000B90F41 /* AppDelegate.swift in Sources */,
-				B98AFF341F80614800B90F41 /* CoursesViewController.swift in Sources */,
+				B9FB646220A11771005D0C78 /* CourseRoomsViewController.swift in Sources */,
 				B9D0F093209D1E8300A530BF /* QuestionService.swift in Sources */,
 				B98AFF491F80950D00B90F41 /* RoomViewController.swift in Sources */,
 				B9D0F08F209D0E8C00A530BF /* APIClient.swift in Sources */,
 				B98AFF531F81599B00B90F41 /* Question.swift in Sources */,
 				B98AFF511F814C5200B90F41 /* Room.swift in Sources */,
 				B98AFF321F80609B00B90F41 /* UIView+Shape.swift in Sources */,
+				B9FB646420A11771005D0C78 /* CoursesViewController.swift in Sources */,
+				B9FB646520A11771005D0C78 /* CreateRoomViewController.swift in Sources */,
 				B98AFF311F80609B00B90F41 /* String+URLEncoding.swift in Sources */,
 				B98AFF211F805B0E00B90F41 /* SplashJoinViewController.swift in Sources */,
 				B98AFF4B1F80B42A00B90F41 /* AskViewController.swift in Sources */,
@@ -651,8 +653,6 @@
 				B9D0F08D209D0C4400A530BF /* Instructor.swift in Sources */,
 				B98AFF4F1F813DB300B90F41 /* RoomService.swift in Sources */,
 				B98AFF2C1F805DF600B90F41 /* CoursesTableViewCell.swift in Sources */,
-				B98AFF361F8087CA00B90F41 /* CourseRoomsViewController.swift in Sources */,
-				B98AFF401F808E8C00B90F41 /* CreateRoomViewController.swift in Sources */,
 				B98AFF171F80528200B90F41 /* SplashLogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

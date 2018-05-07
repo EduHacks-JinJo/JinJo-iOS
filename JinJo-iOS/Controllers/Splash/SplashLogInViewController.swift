@@ -33,8 +33,8 @@ class SplashLogInViewController: UIViewController {
             return
         }
         
-        UserService.shared.login(email: email, password: password) { (success) in
-            if success {
+        InstructorService.sharedService.loginInstructor(email: email, password: password) { (result) in
+            if result.isSuccess {
                 let vc = UIStoryboard(name: "Courses", bundle: nil).instantiateInitialViewController()
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 
