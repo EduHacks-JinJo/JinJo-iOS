@@ -31,10 +31,10 @@ enum Router: URLRequestConvertible {
     
     var method: HTTPMethod {
         switch self {
-        case .addInstructor, .addRoom, .addQuestion:
+        case .addInstructor, .addRoom, .addQuestion, .loginInstructor:
             return .post
             
-        case .loginInstructor, .getRoom, .getRooms, .getQuestions:
+        case .getRoom, .getRooms, .getQuestions:
             return .get
             
         case .updatePassword, .likeQuestion, .answerQuestion:
@@ -45,8 +45,10 @@ enum Router: URLRequestConvertible {
     var path: String {
         switch self {
         // Instructor
-        case .addInstructor, .updatePassword, .loginInstructor:
+        case .addInstructor, .updatePassword:
             return "/instructor"
+        case .loginInstructor:
+            return "/instructor/login"
             
         // Room
         case .addRoom, .getRooms, .getRoom:
@@ -81,9 +83,10 @@ enum Router: URLRequestConvertible {
         
         // Room
         case .addRoom(let instructorID, let roomName):
-            urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["instructorID": instructorID, "roomName": roomName])
+            urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["roomName": roomName])
+            urlRequest.setValue("\(instructorID)", forHTTPHeaderField: "instructorID")
         case .getRooms(let instructorID):
-            urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["instructorID": instructorID])
+            urlRequest.setValue("\(instructorID)", forHTTPHeaderField: "instructorID")
         case .getRoom(let roomID):
             urlRequest.url = URL(string: "\(Router.baseURLString)\(path)/\(roomID)")
 

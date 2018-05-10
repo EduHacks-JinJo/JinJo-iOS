@@ -10,6 +10,10 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
+enum RoomError: Error {
+    case noRoomWithID
+}
+
 class RoomService {
     static let sharedService = RoomService()
     
@@ -42,9 +46,11 @@ class RoomService {
         APIClient.sharedClient.request(Router.getRoom(roomID: roomID)) { (response) in
             switch response {
             case .success(let result):
-                if let json = result as? [[String: Any]] {
+                if let json = result as? [[String: Any]], json.count > 0 {
                     let room = Mapper<Room>().mapArray(JSONArray: json)
                     completion(Result.success(room[0]))
+                } else {
+                    completion(Result.failure(RoomError.noRoomWithID))
                 }
             case .failure(let error):
                 completion(Result.failure(error))

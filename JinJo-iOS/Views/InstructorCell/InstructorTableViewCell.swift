@@ -1,5 +1,5 @@
 //
-//  CoursesTableViewCell.swift
+//  InstructorTableViewCell.swift
 //  JinJo-iOS
 //
 //  Created by Paco Lee on 2017-09-30.
@@ -8,20 +8,24 @@
 
 import UIKit
 
-class CoursesTableViewCell: UITableViewCell {
+class InstructorTableViewCell: UITableViewCell {
 
-    static let identifier = "CoursesTableViewCell"
+    static let identifier = "InstructorTableViewCell"
     
     @IBOutlet var view: UIView!
-    @IBOutlet var courseNameLabel: UILabel!
+    @IBOutlet var roomNameLabel: UILabel!
+    @IBOutlet var roomIDLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
     
-    func config(course: String) {
-        courseNameLabel.text = course
+    func config(room: Room) {
+        if let roomName = room.roomName, let roomID = room.id {
+            roomNameLabel.text = roomName
+            roomIDLabel.text = "\(roomID):"
+        }
     }
     
     private func setupUI() {

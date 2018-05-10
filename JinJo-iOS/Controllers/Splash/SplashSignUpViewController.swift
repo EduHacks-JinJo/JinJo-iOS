@@ -40,14 +40,19 @@ class SplashSignUpViewController: UIViewController {
         
         InstructorService.sharedService.addInstructor(email: email, password: password) { (result) in
             if result.isSuccess {
-                let vc = UIStoryboard(name: "Courses", bundle: nil).instantiateInitialViewController()
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                
-                if let window = appDelegate.window {
-                    UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                        window.rootViewController = vc
-                    }, completion: nil)
-                }
+                InstructorService.sharedService.loginInstructor(email: email, password: password, completion: { (loginResult) in
+                    if let instructor = loginResult.value, let id = instructor.id {
+                        UserDefaults.standard.set(id, forKey: "id")
+                        let vc = UIStoryboard(name: "Instructor", bundle: nil).instantiateInitialViewController()
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        
+                        if let window = appDelegate.window {
+                            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                                window.rootViewController = vc
+                            }, completion: nil)
+                        }
+                    }
+                })
             }
         }
     }

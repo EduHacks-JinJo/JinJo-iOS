@@ -1,9 +1,9 @@
 //
 //  UIView+Shape.swift
-//  weather
+//  JinJo-iOS
 //
-//  Created by Paco Lee on 2017-07-26.
-//  Copyright © 2017 Paco Lee. All rights reserved.
+//  Created by Paco Lee on 2018-05-04.
+//  Copyright © 2018 Paco Lee. All rights reserved.
 //
 
 import Foundation

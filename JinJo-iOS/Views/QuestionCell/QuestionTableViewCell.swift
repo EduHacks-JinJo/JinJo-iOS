@@ -1,5 +1,5 @@
 //
-//  RoomTableViewCell.swift
+//  QuestionTableViewCell.swift
 //  JinJo-iOS
 //
 //  Created by Paco Lee on 2017-09-30.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RoomTableViewCell: UITableViewCell {
+class QuestionTableViewCell: UITableViewCell {
 
-    static let identifier = "RoomTableViewCell"
+    static let identifier = "QuestionTableViewCell"
     
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var voteButton: UIButton!

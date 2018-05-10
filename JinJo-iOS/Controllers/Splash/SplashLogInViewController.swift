@@ -34,8 +34,10 @@ class SplashLogInViewController: UIViewController {
         }
         
         InstructorService.sharedService.loginInstructor(email: email, password: password) { (result) in
-            if result.isSuccess {
-                let vc = UIStoryboard(name: "Courses", bundle: nil).instantiateInitialViewController()
+            if let value = result.value, let id = value.id {
+                UserDefaults.standard.set(id, forKey: "id")
+                
+                let vc = UIStoryboard(name: "Instructor", bundle: nil).instantiateInitialViewController()
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 
                 if let window = appDelegate.window {
@@ -45,6 +47,7 @@ class SplashLogInViewController: UIViewController {
                 }
             }
         }
+        
     }
     
     @IBAction func signUpAction(_ sender: Any) {

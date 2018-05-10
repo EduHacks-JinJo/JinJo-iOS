@@ -18,7 +18,7 @@ class Room: Mappable {
     required public init?(map: Map) { }
     
     public func mapping(map: Map) {
-        id <- map["id"]
+        id <- map["roomID"]
         instructorID <- map["instructorID"]
         roomName <- map["roomName"]
     }

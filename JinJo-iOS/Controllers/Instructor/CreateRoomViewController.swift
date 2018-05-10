@@ -11,7 +11,6 @@ import UIKit
 class CreateRoomViewController: UIViewController {
     static let identifier = "CreateRoomViewController"
     
-    @IBOutlet var courseTextField: UITextField!
     @IBOutlet var nameTextField: UITextField!
 
     override func viewDidLoad() {
@@ -24,15 +23,12 @@ class CreateRoomViewController: UIViewController {
     }
     
     @IBAction func createRoom(_ sender: Any) {
-        guard let courseID = courseTextField.text, courseID != "" else {
-            return
-        }
-        
-        let classname = nameTextField.text ?? ""
-        
-        RoomService.shared.createRoom(courseID: courseID, classname: classname) { (success) in
-            if success {
-                self.navigationController?.popViewController(animated: true)
+        if let roomName = nameTextField.text, !roomName.isEmpty {
+            let id = UserDefaults.standard.integer(forKey: "id")
+            RoomService.sharedService.addRoom(instructorID: id, roomName: roomName) { (result) in
+                if result.isSuccess {
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }

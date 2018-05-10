@@ -65,7 +65,7 @@ class RoomViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: RoomTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: RoomTableViewCell.identifier)
+        tableView.register(UINib(nibName: QuestionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: QuestionTableViewCell.identifier)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 125
         tableView.tableFooterView = UIView()
@@ -119,7 +119,7 @@ extension RoomViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.identifier, for: indexPath) as! RoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as! QuestionTableViewCell
         cell.config(question: questions[indexPath.row], roomControllerState: roomControllerState, roomControllerDelegate: self)
         return cell
     }
