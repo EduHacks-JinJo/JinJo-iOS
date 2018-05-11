@@ -47,9 +47,10 @@ class SplashLogInViewController: UIViewController {
                         window.rootViewController = vc
                     }, completion: nil)
                 }
+            } else if let error =  result.error, let instructorError = error as? InstructorError, instructorError == .incorrectLogin {
+               UIAlertController.showIncorrectLoginPopUp()
             }
         }
-        
     }
     
     @IBAction func signUpAction(_ sender: Any) {

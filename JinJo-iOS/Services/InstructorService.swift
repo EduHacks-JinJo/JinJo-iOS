@@ -10,6 +10,10 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
+enum InstructorError: Error {
+    case incorrectLogin
+}
+
 class InstructorService {
     static let sharedService = InstructorService()
     
@@ -39,9 +43,11 @@ class InstructorService {
         APIClient.sharedClient.request(Router.loginInstructor(email: email, password: password)) { (response) in
             switch response {
             case .success(let result):
-                if let json = result as? [[String: Any]] {
+                if let json = result as? [[String: Any]], json.count > 0 {
                     let instructor = Mapper<Instructor>().mapArray(JSONArray: json)
                     completion(Result.success(instructor[0]))
+                } else {
+                    completion(Result.failure(InstructorError.incorrectLogin))
                 }
             case .failure(let error):
                 completion(Result.failure(error))
