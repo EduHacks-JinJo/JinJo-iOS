@@ -42,7 +42,7 @@ class AskViewController: UIViewController {
     }
     
     @IBAction func postAction(_ sender: Any) {
-        if let question = textView.text, question != "", let roomID = room.id {
+        if let question = textView.text, !question.isEmpty, let roomID = room.id {
             QuestionService.sharedService.addQuestion(question: question, roomID: roomID) { (result) in
                 if result.isSuccess {
                     self.navigationController?.popViewController(animated: true)

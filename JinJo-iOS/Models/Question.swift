@@ -20,7 +20,7 @@ class Question: Mappable {
     required public init?(map: Map) { }
     
     public func mapping(map: Map) {
-        id <- map["id"]
+        id <- map["questionID"]
         question <- map["question"]
         upvotes <- map["upvotes"]
         roomID <- map["roomID"]

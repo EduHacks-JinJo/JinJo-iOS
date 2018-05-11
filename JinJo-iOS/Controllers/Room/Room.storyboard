@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +51,9 @@
                             <constraint firstAttribute="trailing" secondItem="m9w-wu-FJZ" secondAttribute="trailing" id="qGr-TU-N88"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cUd-UU-pjL">
+                        <barButtonItem key="backBarButtonItem" title=" " id="J1h-Jh-gji"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="questionButton" destination="m9w-wu-FJZ" id="P68-BU-7bN"/>
                         <outlet property="questionButtonHeight" destination="U7D-c8-w1l" id="M0X-SU-b8W"/>
@@ -61,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="2720.8000000000002" y="119.1904047976012"/>
         </scene>
-        <!--Ask A Question-->
+        <!--Ask View Controller-->
         <scene sceneID="yOY-Ew-O5z">
             <objects>
                 <viewController storyboardIdentifier="AskViewController" id="lLS-Nw-wQ0" customClass="AskViewController" customModule="JinJo_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,9 +111,6 @@
                             <constraint firstAttribute="trailing" secondItem="RvS-zb-hFl" secondAttribute="trailing" constant="16" id="wVO-Mk-os6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ask A Question" id="dYr-d1-AwS">
-                        <barButtonItem key="backBarButtonItem" title=" " id="jjm-aY-J1p"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="postButton" destination="RvS-zb-hFl" id="JYg-0V-dq7"/>
                         <outlet property="textView" destination="tBn-1L-joT" id="R3s-da-g7I"/>

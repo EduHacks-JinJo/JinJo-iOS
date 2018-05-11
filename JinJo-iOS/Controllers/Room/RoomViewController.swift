@@ -64,7 +64,6 @@ class RoomViewController: UIViewController {
     
     private func setupTableView() {
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.register(UINib(nibName: QuestionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: QuestionTableViewCell.identifier)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 125
@@ -97,18 +96,6 @@ class RoomViewController: UIViewController {
             UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
                 window.rootViewController = vc
             }, completion: nil)
-        }
-    }
-}
-
-extension RoomViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let id = questions[indexPath.row].id {
-            QuestionService.sharedService.answerQuestion(questionID: id) { (result) in
-                if result.isSuccess {
-                    self.getQuestions()
-                }
-            }
         }
     }
 }

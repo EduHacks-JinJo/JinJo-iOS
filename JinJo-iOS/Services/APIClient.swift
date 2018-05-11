@@ -92,7 +92,7 @@ enum Router: URLRequestConvertible {
 
         // Question
         case .getQuestions(let roomID):
-            urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["roomID": roomID])
+            urlRequest.url = URL(string: "\(Router.baseURLString)\(path)/\(roomID)")
         case .addQuestion(let question, let roomID):
             urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["question": question, "roomID": roomID])
         case .likeQuestion(let questionID):

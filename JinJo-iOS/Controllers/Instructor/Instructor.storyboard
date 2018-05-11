@@ -60,6 +60,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose A Room" id="V3c-Kv-WDY">
+                        <barButtonItem key="backBarButtonItem" title=" " id="as3-OV-bxY"/>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="Qgd-st-fAR">
                             <color key="tintColor" red="0.41959643359999999" green="0.73057013749999999" blue="0.71975094080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -170,7 +171,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2m-kQ-xZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationItem title="CPSC 210" id="Igl-57-YlD"/>
             </objects>
             <point key="canvasLocation" x="1824.8" y="111.99400299850076"/>
         </scene>
