@@ -22,6 +22,8 @@ class SplashLogInViewController: UIViewController {
     
     private func setup() {
         logInButton.round(cornerRadius: 6.0)
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     @IBAction func logInAction(_ sender: Any) {
@@ -59,5 +61,12 @@ class SplashLogInViewController: UIViewController {
     @IBAction func studentAction(_ sender: Any) {
         let vc = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: SplashJoinViewController.identifier)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension SplashLogInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }

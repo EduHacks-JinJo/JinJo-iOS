@@ -23,6 +23,9 @@ class SplashSignUpViewController: UIViewController {
     
     private func setup() {
         signUpButton.round(cornerRadius: 6.0)
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
     }
 
     @IBAction func signUpAction(_ sender: Any) {
@@ -65,5 +68,12 @@ class SplashSignUpViewController: UIViewController {
     @IBAction func studentAction(_ sender: Any) {
         let vc = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: SplashJoinViewController.identifier)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension SplashSignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }

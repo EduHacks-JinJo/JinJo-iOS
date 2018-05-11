@@ -23,6 +23,7 @@ class SplashJoinViewController: UIViewController {
     private func setup() {
         joinRoomButton.round(cornerRadius: 6.0)
         instructorButton.round(cornerRadius: 6.0)
+        roomTextField.delegate = self
     }
     
     @IBAction func joinRoom(_ sender: Any) {
@@ -43,5 +44,12 @@ class SplashJoinViewController: UIViewController {
     @IBAction func instructorAction(_ sender: Any) {
         let vc = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: SplashLogInViewController.identifier)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension SplashJoinViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }

@@ -134,6 +134,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Room" id="udv-c3-mjy"/>
                     <connections>
+                        <outlet property="createRoomButton" destination="ciQ-Id-Oul" id="L3o-Yg-MB4"/>
                         <outlet property="nameTextField" destination="BAN-Hd-lIe" id="AKW-DR-hc6"/>
                     </connections>
                 </viewController>
