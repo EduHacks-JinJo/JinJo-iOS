@@ -26,8 +26,8 @@ enum Router: URLRequestConvertible {
     // Question
     case getQuestions(roomID: Int)
     case addQuestion(question: String, roomID: Int)
-    case likeQuestion(questionID: Int)
-    case answerQuestion(questionID: Int)
+    case likeQuestion(questionID: Int, roomID: Int)
+    case answerQuestion(questionID: Int, roomID: Int)
     
     var method: HTTPMethod {
         switch self {
@@ -95,9 +95,11 @@ enum Router: URLRequestConvertible {
             urlRequest.url = URL(string: "\(Router.baseURLString)\(path)/\(roomID)")
         case .addQuestion(let question, let roomID):
             urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["question": question, "roomID": roomID])
-        case .likeQuestion(let questionID):
+        case .likeQuestion(let questionID, let roomID):
+            urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["roomID": roomID])
             urlRequest.url = URL(string: "\(Router.baseURLString)\(path)/\(questionID)")
-        case .answerQuestion(let questionID):
+        case .answerQuestion(let questionID, let roomID):
+            urlRequest = try JSONEncoding.default.encode(urlRequest, with: ["roomID": roomID])
             urlRequest.url = URL(string: "\(Router.baseURLString)\(path)/\(questionID)")
         }
         

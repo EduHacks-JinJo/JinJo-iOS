@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SocketIO
 
 protocol RoomControllerDelegate {
     func retrieveQuestions()
@@ -28,6 +29,8 @@ class RoomViewController: UIViewController {
     @IBOutlet var questionButton: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var questionButtonHeight: NSLayoutConstraint!
+    
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8080")! as URL)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +63,8 @@ class RoomViewController: UIViewController {
             questionButtonHeight.constant = 0
             questionButton.isHidden = true
         }
+        
+        setupSocket()
     }
     
     private func setupTableView() {
@@ -69,6 +74,27 @@ class RoomViewController: UIViewController {
         tableView.estimatedRowHeight = 125
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+    }
+    
+    private func setupHandlers() {
+        socket.onAny {print("Got event: \($0.event), with items: \($0.items)")}
+        
+        socket.on(clientEvent: .connect) { [weak self]data, ack in
+            print("socket connected")
+            
+            if let roomID = self?.room.id {
+                self?.socket.emit("joining room", with: [roomID])
+            }
+        }
+        
+        socket.on("refresh questions") { [weak self] data, ack in
+            self?.getQuestions()
+        }
+    }
+    
+    private func setupSocket() {
+        setupHandlers()
+        socket.connect()
     }
     
     func getQuestions() {

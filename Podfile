@@ -10,6 +10,7 @@ target 'JinJo-iOS' do
   pod 'ObjectMapper'
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftyJSON'
+  pod 'Socket.IO-Client-Swift', '~> 11.1.3';
 
   target 'JinJo-iOSTests' do
     inherit! :search_paths

@@ -7,18 +7,28 @@
 //
 
 import UIKit
+import SocketIO
 
 class InstructorRoomViewController: UIViewController {
     static let identifier = "InstructorRoomViewController"
 
     var questions = [Question]()
     var room: Room!
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8080")! as URL)
     
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    
+        if self.isMovingFromParentViewController, let roomID = room.id {
+            socket.emit("disconnect", with: [roomID])
+        }
     }
     
     func config(room: Room) {
@@ -41,6 +51,8 @@ class InstructorRoomViewController: UIViewController {
                 }
             }
         }
+        
+         setupSocket()
     }
     
     private func setupTableView() {
@@ -52,6 +64,28 @@ class InstructorRoomViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
     }
+    
+    private func setupSocket() {
+        setupHandlers()
+        socket.connect()
+    }
+    
+    private func setupHandlers() {
+        socket.onAny {print("Got event: \($0.event), with items: \($0.items)")}
+        
+        socket.on(clientEvent: .connect) {[weak self] data, ack in
+            print("socket connected")
+            
+            if let roomID = self?.room.id {
+                self?.socket.emit("joining room", with: [roomID])
+            }
+        }
+        
+        socket.on("refresh questions") { [weak self] data, ack in
+            self?.getQuestions()
+        }
+    }
+    
     
     func getQuestions() {
         if let roomID = room.id {
@@ -68,8 +102,8 @@ class InstructorRoomViewController: UIViewController {
 extension InstructorRoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let question = questions[indexPath.row]
-        if let questionID = question.id {
-            QuestionService.sharedService.answerQuestion(questionID: questionID) { (result) in
+        if let questionID = question.id, let roomID = question.roomID {
+            QuestionService.sharedService.answerQuestion(questionID: questionID, roomID: roomID) { (result) in
                 if result.isSuccess {
                     self.getQuestions()
                 }

@@ -64,8 +64,8 @@ class QuestionTableViewCell: UITableViewCell {
     }
     
     @IBAction func voteAction(_ sender: Any) {
-        if let id = question.id {
-            QuestionService.sharedService.likeQuestion(questionID: id) { (result) in
+        if let questionID = question.id, let roomID = question.roomID {
+            QuestionService.sharedService.likeQuestion(questionID: questionID, roomID: roomID) { (result) in
                 if result.isSuccess {
                     self.delegate.retrieveQuestions()
                 }

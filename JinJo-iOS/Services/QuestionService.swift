@@ -38,8 +38,8 @@ class QuestionService {
         }
     }
     
-    func likeQuestion(questionID: Int, completion: @escaping (Result<Bool>) -> Void) {
-        APIClient.sharedClient.request(Router.likeQuestion(questionID: questionID)) { (response) in
+    func likeQuestion(questionID: Int, roomID: Int, completion: @escaping (Result<Bool>) -> Void) {
+        APIClient.sharedClient.request(Router.likeQuestion(questionID: questionID, roomID: roomID)) { (response) in
             switch response {
             case .success:
                 completion(Result.success(true))
@@ -49,8 +49,8 @@ class QuestionService {
         }
     }
     
-    func answerQuestion(questionID: Int, completion: @escaping (Result<Bool>) -> Void) {
-        APIClient.sharedClient.request(Router.answerQuestion(questionID: questionID)) { (response) in
+    func answerQuestion(questionID: Int, roomID: Int, completion: @escaping (Result<Bool>) -> Void) {
+        APIClient.sharedClient.request(Router.answerQuestion(questionID: questionID, roomID: roomID)) { (response) in
             switch response {
             case .success:
                 completion(Result.success(true))
