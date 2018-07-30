@@ -28,6 +28,7 @@ class InstructorRoomViewController: UIViewController {
     
         if self.isMovingFromParentViewController, let roomID = room.id {
             socket.emit("disconnect", with: [roomID])
+            socket.disconnect()
         }
     }
     
