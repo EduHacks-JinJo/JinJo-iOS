@@ -46,8 +46,8 @@ class RoomViewController: UIViewController {
         self.room = room
         self.roomControllerState = roomControllerState
         
-        if let roomName = room.roomName {
-            title = "Room ID: \(roomName)"
+        if let roomName = room.roomName, let roomID = room.id{
+            title = "\(roomID) : \(roomName)"
         }
     }
     
