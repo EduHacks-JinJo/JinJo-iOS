@@ -11,7 +11,7 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
     
-    static let baseURLString = "http://localhost:8080"
+    static let baseURLString = "http://ec2-54-218-49-17.us-west-2.compute.amazonaws.com:8080"
     
     // Instructor
     case addInstructor(email: String, password: String)

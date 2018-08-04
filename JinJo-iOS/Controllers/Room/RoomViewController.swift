@@ -30,7 +30,7 @@ class RoomViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var questionButtonHeight: NSLayoutConstraint!
     
-    let socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8080")! as URL)
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://ec2-54-218-49-17.us-west-2.compute.amazonaws.com:8080")! as URL)
 
     override func viewDidLoad() {
         super.viewDidLoad()
