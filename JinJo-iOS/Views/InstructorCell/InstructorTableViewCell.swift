@@ -24,7 +24,7 @@ class InstructorTableViewCell: UITableViewCell {
     func config(room: Room) {
         if let roomName = room.roomName, let roomID = room.id {
             roomNameLabel.text = roomName
-            roomIDLabel.text = "\(roomID):"
+            roomIDLabel.text = "#\(roomID):"
         }
     }
     

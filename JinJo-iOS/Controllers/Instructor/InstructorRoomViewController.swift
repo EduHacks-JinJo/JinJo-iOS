@@ -35,8 +35,8 @@ class InstructorRoomViewController: UIViewController {
     func config(room: Room) {
         self.room = room
         
-        if let roomName = room.roomName {
-            navigationItem.title = roomName
+        if let roomName = room.roomName, let roomID = room.id {
+            navigationItem.title = "#\(roomID): \(roomName)"
         }
     }
     
